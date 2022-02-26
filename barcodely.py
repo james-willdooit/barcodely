@@ -1,6 +1,5 @@
 from sys import argv
 from os import system
-from time import sleep
 
 from pyautogui import typewrite 
 import PySimpleGUI as sg
@@ -15,6 +14,8 @@ def get_window_focus() -> None:
 def return_window_focus() -> None:
     system('xdotool search --name "Barcode Emulator" | xargs xdotool windowactivate')
 
+ttk_style = 'alt'
+sg.theme('SystemDefaultForReal')
 
 barcode_list_col = [
     [
@@ -32,13 +33,15 @@ barcode_list_col = [
     ],
 ]
 
+
 layout = [
     [
         sg.Column(barcode_list_col),
     ]
 ]
 
-window = sg.Window("Barcode Emulator", layout)
+window = sg.Window("Barcode Emulator", layout, ttk_theme=ttk_style)
+
 barcode_list = []
 
 # Run the Event Loop
