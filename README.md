@@ -1,5 +1,9 @@
 # Barcodely
 
+<p align="center">
+  <img src="./screenshots/1.png" alt="Barecodely">
+</p>
+
 Send barcode events to Odoo.
 
 This allows us to test barcode functionality without the need of an barcode scanner. 
@@ -35,4 +39,3 @@ Install python3 requirements
 ``` bash
 pip3 install -r requirements.txt
 ```
-
