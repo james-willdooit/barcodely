@@ -19,7 +19,6 @@ def return_window_focus() -> None:
 
 def update_barcode_csv(barcode_list: list) -> None:
     try:
-        print(barcode_list)
         with open(BARCODE_CSV, 'w', encoding='UTF-8') as file:
             writer = csv.writer(file,  delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             for barcode in barcode_list:
@@ -77,6 +76,7 @@ while True:
         if len(values["-BARCODE LIST-"]) > 0:
             get_window_focus()
             send_barcode_event(values["-BARCODE LIST-"][0])
+
             return_window_focus()
 
     # Add barcode to favorites
