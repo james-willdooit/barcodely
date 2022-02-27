@@ -28,7 +28,7 @@ barcode_list_col = [
     ],
     [
         sg.Listbox(
-            values=[], enable_events=True, size=(40, 20), key="-BARCODE LIST-"
+            values=[], size=(40, 20), key="-BARCODE LIST-"
         )
     ],
 ]
