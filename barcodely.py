@@ -1,4 +1,3 @@
-from sys import argv
 from os import system, makedirs, path
 import csv
 
@@ -83,6 +82,7 @@ while True:
     # Add barcode to favorites
     if event == "Add":
         barcode_list.append(values.get('-BARCODE-'))
+        window['-BARCODE-'].Update('')
         window["-BARCODE LIST-"].update(barcode_list)
 
         update_barcode_csv(barcode_list)
